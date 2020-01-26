@@ -1,0 +1,14 @@
+<!-- Example that shows how one can attach a shadow DOM to the DOM node-->
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="paragraph"></p>
+  </body>
+  <script>
+    const paragraph = document.getElementById("paragraph");
+    const shadowRoot = paragraph.attachShadow({
+      mode: "open"
+    });
+    shadowRoot.innerHTML = "<h1>My Shadow DOM</h1> <h2> Pretty Slick</h2>"; // Could also use appendChild().
+  </script>
+</html>

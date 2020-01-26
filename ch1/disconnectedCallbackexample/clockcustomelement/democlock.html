@@ -1,0 +1,18 @@
+<!--Example that shows how to remove custom element from DOM and capture disconnectedCallback() method trigger-->
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head> </head>
+  <body>
+    <c-clock> </c-clock>
+    <input type="button" value="Remove clock element" onclick="remove();" />
+  </body>
+  <script src="clock.js"></script>
+  <script>
+    function remove() {
+      if (document.querySelector("c-clock") !== null) {
+        document.querySelector("c-clock").remove(); // 'disconnected from the DOM'
+      }
+    }
+  </script>
+</html>
